@@ -1,0 +1,26 @@
+body{
+  background-color: var(--color-light);
+  font-family: source-sans-3, Arial, sans-serif;
+  font-weight: var(--fw-regular);
+  font-size: var(--m);
+}
+
+header{
+  background-color: var(--color-light);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--fw-bold);
+}
+
+
+h1{
+  font-size: var(--xl);
+}
+
+h2{
+  font-size: var(--l);
+}
+
+h3{
+  font-size: var(--m);
+}

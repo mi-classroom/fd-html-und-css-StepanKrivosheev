@@ -1,0 +1,125 @@
+header {
+	background-color: var(--color-lightest);
+}
+
+h2{
+	padding: var(--s);
+}
+/* Sections
+---------------------------------------------------------------------------- */
+.sections {
+	width: 100%;
+	padding: var(--l);
+	display: flex;
+	flex-direction: row;
+	gap: 60px;
+}
+
+main {
+	background-color: var(--color-light);
+}
+
+/* Suche
+---------------------------------------------------------------------------- */
+.suche {
+	padding: var(--xs);
+
+	input {
+		background-color: var(--color-lightest);
+		padding: var(--xxs);
+		padding-right: var(--xxs);
+		margin: var(--xs);
+		border: none;
+		outline: none;
+		width: 100%;
+	}
+}
+
+/* Banner (Willkommen)
+---------------------------------------------------------------------------- */
+.banner {
+	background-color: var(--color-orange);
+	color: var(--color-lightest);
+	padding-inline: var(--s);
+	padding: var(--s);
+	:any-link {
+		text-decoration: underline;
+	}
+}
+
+/* Fav List
+---------------------------------------------------------------------------- */
+.list {
+	margin: 0;
+	list-style: none;
+}
+
+/* Fav Item
+---------------------------------------------------------------------------- */
+
+.list-item {
+	background-color: var(--color-lightest);
+	padding: var(--xs);
+	margin: var(--xs);
+	
+	span{
+		padding-right: var(--xxs);
+	}
+	address {
+		font-style: normal;
+		line-height: var(--lh-tight);
+		font-size: var(--xs);
+		margin-left: var(--xxl);
+	}
+}
+
+/* Card
+---------------------------------------------------------------------------- */
+.card {
+	background-color: var(--color-lightest);
+	margin: var(--s);
+	padding-bottom: var(--xs);
+	:any-link {
+		color: black;
+	}
+
+	h3,
+	addres {
+		margin-left: var(--xs);
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	ul {
+		margin-top: 10px;
+		display: flex;
+		flex-direction: row;
+		gap: var(--xxs);
+		overflow-x: scroll;
+		scroll-behavior: smooth;
+		scrollbar-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+	}
+	li {
+		padding-inline: var(--xxs);
+		background-color: var(--color-light);
+	}
+}
+
+/* Footer
+---------------------------------------------------------------------------- */
+footer {
+	width: fit-content;
+	font-size: small;
+	display: flex;
+	flex-direction: row;
+	gap: var(--m);
+	overflow-x: scroll;
+
+	ul {
+		padding-left: var(--s);
+		display: flex;
+		flex-direction: column;
+	}
+}
