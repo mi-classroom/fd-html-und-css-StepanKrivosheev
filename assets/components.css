@@ -1,48 +1,107 @@
-header {
-	background-color: var(--color-lightest);
-}
-
-h2{
-	padding: var(--s);
-}
 /* Sections
 ---------------------------------------------------------------------------- */
 .sections {
-	width: 100%;
-	padding: var(--l);
 	display: flex;
+	width: 100%;
 	flex-direction: row;
+	padding: var(--l);
 	gap: 60px;
+
+	li{
+		width: 33%;
+	}
 }
 
 main {
+	max-width: 60rem;
 	background-color: var(--color-light);
+	margin-inline: auto;
 }
 
 /* Suche
 ---------------------------------------------------------------------------- */
-.suche {
-	padding: var(--xs);
+.search-container{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+	
+	
 
+.search {
+	position: relative;
+	right: 20;
+	display: inline;
+	padding: var(--s);
+	
 	input {
-		background-color: var(--color-lightest);
 		padding: var(--xxs);
-		padding-right: var(--xxs);
-		margin: var(--xs);
 		border: none;
+		margin-top: var(--l);
+		background-color: var(--color-lightest);
 		outline: none;
-		width: 100%;
+		
+
+	}
+
+	.big-vp.icon {
+		position: relative;
+		right: 24px;
+		bottom: 1px;
+	}
+
+	.small-vp{
+		.icon {
+		position: relative;
+		right: 24px;
+		bottom: 8px;}
+
+	}
+	
+
+	&.big-vp{display: none;}
+
+	@media screen and (width >= 400px) {
+		&.small-vp{
+			display: none;
+		}
+
+		&.big-vp{
+			display: inline;
+		
+
+			input{
+				background-color: var(--color-light) ;
+			}
+
+			div{
+				position: relative;
+				right: 4px;
+				padding: var(--xxs);
+				background-color: var(--color-orange);
+				color: var(--color-lightest);
+				
+			}
+		}
 	}
 }
+
+
 
 /* Banner (Willkommen)
 ---------------------------------------------------------------------------- */
 .banner {
+	padding: var(--s);
 	background-color: var(--color-orange);
 	color: var(--color-lightest);
 	padding-inline: var(--s);
-	padding: var(--s);
+
+	p{
+		padding: var(--xxs);
+	}
+
 	:any-link {
+		padding: var(--xxs);
 		text-decoration: underline;
 	}
 }
@@ -50,41 +109,53 @@ main {
 /* Fav List
 ---------------------------------------------------------------------------- */
 .list {
-	margin: 0;
-	list-style: none;
+	&.is-grid{
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+	}
+	
+	&.is-inline{
+		li{
+			display: inline-block;
+		}
+	}
 }
 
 /* Fav Item
 ---------------------------------------------------------------------------- */
 
 .list-item {
-	background-color: var(--color-lightest);
 	padding: var(--xs);
-	margin: var(--xs);
+	margin-bottom: var(--xxs);
+	margin-left: var(--xxs);
+	background-color: var(--color-lightest);
 	
+
 	span{
 		padding-right: var(--xxs);
 	}
+
 	address {
+		margin-left: var(--xxl);
+		font-size: var(--xs);
 		font-style: normal;
 		line-height: var(--lh-tight);
-		font-size: var(--xs);
-		margin-left: var(--xxl);
 	}
 }
 
 /* Card
 ---------------------------------------------------------------------------- */
 .card {
-	background-color: var(--color-lightest);
-	margin: var(--s);
 	padding-bottom: var(--xs);
+	margin: var(--s);
+	background-color: var(--color-lightest);
+
 	:any-link {
 		color: black;
 	}
 
 	h3,
-	addres {
+	address {
 		margin-left: var(--xs);
 	}
 
@@ -93,33 +164,31 @@ main {
 	}
 
 	ul {
-		margin-top: 10px;
 		display: flex;
 		flex-direction: row;
+		margin-top: 10px;
 		gap: var(--xxs);
 		overflow-x: scroll;
-		scroll-behavior: smooth;
-		scrollbar-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+		scrollbar-color: rgba(0 0 0/ 0%) rgb(0 0 0/ 0%);
 	}
+
+	/* stylelint-disable-next-line no-descending-specificity */
 	li {
-		padding-inline: var(--xxs);
+		margin-left: none;
 		background-color: var(--color-light);
+		padding-inline: var(--xxs);
 	}
 }
 
 /* Footer
 ---------------------------------------------------------------------------- */
 footer {
-	width: fit-content;
-	font-size: small;
 	display: flex;
+	width: fit-content;
 	flex-direction: row;
+	font-size: small;
 	gap: var(--m);
 	overflow-x: scroll;
-
-	ul {
-		padding-left: var(--s);
-		display: flex;
-		flex-direction: column;
-	}
+ 
 }
+

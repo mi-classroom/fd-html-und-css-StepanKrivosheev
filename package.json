@@ -1,0 +1,19 @@
+{
+  "name": "fd-html-und-css-stepankrivosheev",
+  "version": "1.0.0",
+  "description": "[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/vhzxm6lR)\r # WebDev: Frontend-Development – Basics",
+  "main": "index.js",
+  "scripts": {
+    "lint": "stylelint assets/**/*.css",
+    "lint:fix": "stylelint assets/**/*.css --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stepan Krivosheev",
+  "license": "ISC",
+  "devDependencies": {
+    "stylelint": "^16.4.0",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.4"
+  }
+}
