@@ -1,37 +1,47 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: var(--color-light);
-  font-family: "source-sans-3", Arial, sans-serif;
+  font-family: 'source-sans-3', Arial, sans-serif;
   font-size: var(--m);
   font-weight: var(--fw-regular);
 }
 
-header{
+main {
+  max-width: 80rem;
+  background-color: var(--color-light);
+  margin-inline: auto;
+}
+
+header {
   background-color: var(--color-lightest);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: var(--fw-bold);
 }
 
-
-h1{
+h1 {
   padding: var(--xxs);
   font-size: var(--xl);
 }
 
-h2{
+h2 {
   padding: var(--s);
   font-size: var(--l);
 }
 
-h3{
+h3 {
   font-size: var(--m);
 }
 
-footer{
+footer {
   background-color: var(--color-light);
 }

@@ -1,228 +1,255 @@
 /* Header
 ---------------------------------------------------------------------------- */
 header {
-	display:flex;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 
-	.search-container {
-		position: relative;
-		display: flex;
-		width: 1000px;
-		flex-direction: row;
-	}
+  .icon-menu {
+    position: relative;
+    top: 18px;
+    margin: var(--m);
+  }
 }
 
 /* Main Menu
 ---------------------------------------------------------------------------- */
 .main-menu {
-	position: fixed;
-	z-index: 10;
-	top: 0;
-	left: 0;
-	display: flex;
-	width: 200px;
-	height: calc(100vh - var(--xl) * 2);
-	flex-direction: column;
-	padding: var(--xl);
-	gap: var(--l);
-	background-color: var(--color-grey);
-	transform: translateX(-100%);
-	transition: transform var(--tr-normal);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 200px;
+  height: 100%;
+  flex-direction: column;
+  padding: var(--xl);
+  gap: var(--l);
+  background-color: var(--color-light);
+  transform: translateX(-100%);
+  transition: transform var(--tr-normal);
 
-	&.is-active {
-		transform: translateX(0);
-	}
+  &.is-active {
+    transform: translateX(0);
+  }
 }
 
-/* Sections
+/* Tab Navigation
 ---------------------------------------------------------------------------- */
 
-.sections {
-	display: flex;
-	padding-top: var(--l);
-	padding-bottom: var(--l);
-	padding-left: var(--l);
+.tab-navigation {
+  display: flex;
+  background-color: var(--color-lightest);
+  li {
+    width: 100%;
+    justify-content: space-around;
+    padding: var(--l);
 
-	li {
-		width: 100%;
-	}
+    &.is-active {
+      background-color: var(--color-light);
+    }
+  }
 }
 
 main {
-	max-width: 60rem;
-	background-color: var(--color-light);
-	margin-inline: auto;
+  max-width: 80rem;
+  background-color: var(--color-light);
+  margin-inline: auto;
+}
+
+/* Area
+---------------------------------------------------------------------------- */
+.area {
+  display: none;
+  &.is-active {
+    display: block;
+  }
 }
 
 /* Suche
 ---------------------------------------------------------------------------- */
 /* stylelint-disable-next-line no-descending-specificity */
 .search-container {
-	.search {
-		padding: var(--s);
+  display: flex;
+  margin-top: var(--xs);
+  flex-grow: 1;
 
-		input {
-			width: 80%;
-			border: none;
-			margin-top: var(--l);
-			background-color: var(--color-lightest);
-			outline: none;
+  .search {
+    &.big-vp {
+      display: flex;
+      flex-grow: 1;
+      margin: var(--s);
 
-			.icon {
-				position: relative;
-				right: 24px;
-				bottom: 1px;
-			}
-		}
+      input {
+        flex-grow: 1;
+        background-color: var(--color-light);
+        border: none;
+        outline: none;
 
-		&.big-vp {
-			.icon {
-				position: relative;
-				right: 24px;
-				bottom: 1px;
-			}
-		}
+        &::placeholder {
+          padding-left: var(--m);
+        }
+      }
+      .icon {
+        position: relative;
+        background-color: var(--color-orange);
+        padding: var(--m);
+      }
+    }
 
-		&.small-vp {
-			input {	
-				width: 90%;
-				padding: var(--m);
-				margin: var(--m);
-			}
+    &.small-vp {
+      display: flex;
+      flex-grow: 1;
+      input {
+        flex-grow: 1;
+        border: none;
+        outline: none;
 
-			.icon {
-				position: relative;
-				right: 44px;
-				bottom: 30px;
-			}
-		}
+        padding: var(--m);
+        margin: var(--m);
+      }
 
-		&.big-vp {
-			display: none;
-		}
+      .icon {
+        position: relative;
+        top: 32px;
+        right: 44px;
+      }
+    }
 
-		@media screen and (width >= 600px) {
-			&.small-vp {
-				display: none;
-			}
+    &.big-vp {
+      display: none;
+    }
 
-			&.big-vp {
-				display: inline;
+    @media screen and (width >= 634px) {
+      &.small-vp {
+        display: none;
+      }
 
-				input {
-					background-color: var(--color-light);
-					width: 90%;
-					padding: var(--m);
-				}
-
-				div {
-					position: relative;
-					right: 4px;
-					padding: var(--xxs);
-					background-color: var(--color-orange);
-					color: var(--color-lightest);
-				}
-			}
-		}
-	}
+      &.big-vp {
+        display: flex;
+      }
+    }
+  }
 }
 
 /* Banner (Willkommen)
 ---------------------------------------------------------------------------- */
 .banner {
-	padding: var(--s);
-	background-color: var(--color-orange);
-	color: var(--color-lightest);
-	padding-inline: var(--s);
+  padding: var(--s);
+  background-color: var(--color-orange);
+  color: var(--color-lightest);
+  padding-inline: var(--s);
+  align-items: center;
+  p {
+    padding: var(--xxs);
+    max-width: 800px;
+  }
 
-	p {
-		padding: var(--xxs);
-	}
-
-	:any-link {
-		padding: var(--xxs);
-		text-decoration: underline;
-	}
+  :any-link {
+    padding: var(--xxs);
+    text-decoration: underline;
+  }
 }
 
 /* Fav List
 ---------------------------------------------------------------------------- */
 .list {
-	&.is-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-	}
+  &.is-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  }
 
-	&.is-inline {
-		li {
-			display: inline-block;
-		}
-	}
+  &.is-inline {
+    li {
+      display: inline-block;
+    }
+  }
 }
 
 /* Fav Item
 ---------------------------------------------------------------------------- */
 .list-item {
-	padding: var(--xs);
-	margin-bottom: var(--xxs);
-	margin-left: var(--xxs);
-	background-color: var(--color-lightest);
+  padding: var(--xs);
+  margin-bottom: var(--xxs);
+  margin-left: var(--xxs);
+  background-color: var(--color-lightest);
 
-	span {
-		padding-right: var(--xxs);
-	}
+  span {
+    padding-right: var(--xxs);
+  }
 
-	address {
-		margin-left: var(--xxl);
-		font-size: var(--xs);
-		font-style: normal;
-		line-height: var(--lh-tight);
-	}
+  address {
+    margin-left: var(--xxl);
+    font-size: var(--xs);
+    font-style: normal;
+    line-height: vr(--lh-tight);
+  }
 }
 
 /* Card
 ---------------------------------------------------------------------------- */
 .card {
-	padding-bottom: var(--xs);
-	margin: var(--s);
-	background-color: var(--color-lightest);
+  padding-bottom: var(--xs);
+  margin: var(--s);
+  background-color: var(--color-lightest);
 
-	:any-link {
-		color: black;
-	}
+  :any-link {
+    color: black;
+  }
 
-	h3,
-	address {
-		margin-left: var(--xs);
-	}
+  h3,
+  address {
+    margin-left: var(--xs);
+  }
 
-	img {
-		max-width: 100%;
-	}
+  img {
+    max-width: 100%;
+  }
 
-	ul {
-		display: flex;
-		flex-direction: row;
-		margin-top: 10px;
-		gap: var(--xxs);
-		overflow-x: scroll;
-		scrollbar-color: rgba(0 0 0/ 0%) rgb(0 0 0/ 0%);
-	}
+  ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: var(--xxs);
+    overflow-x: scroll;
+    scrollbar-color: rgba(0 0 0/ 0%) rgb(0 0 0/ 0%);
+  }
 
-	/* stylelint-disable-next-line no-descending-specificity */
-	li {
-		margin-left: none;
-		background-color: var(--color-light);
-		padding-inline: var(--xxs);
-	}
+  /* stylelint-disable-next-line no-descending-specificity */
+  li {
+    margin-left: none;
+    background-color: var(--color-light);
+    padding-inline: var(--xxs);
+  }
 }
 
 /* Footer
 ---------------------------------------------------------------------------- */
 footer {
-	display: flex;
-	width: fit-content;
-	flex-direction: row;
-	font-size: small;
-	gap: var(--m);
-	overflow-x: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  ul {
+    li {
+      display: flex;
+      flex-direction: column;
+      padding-left: var(--s);
+      margin-bottom: var(--s);
+
+      a {
+        padding-bottom: var(--xs);
+      }
+      ::before {
+        content: '\00BB';
+      }
+    }
+  }
 }

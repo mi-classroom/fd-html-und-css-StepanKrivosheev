@@ -1,108 +1,116 @@
 <!DOCTYPE html>
 
 <html lang="de">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Uebersicht Page</title>
-  <link rel="stylesheet" href="/assets/styles/reset.css">
-  <link rel="stylesheet" href="/assets/styles/base.css">
-  <link rel="stylesheet" href="/assets/styles/fonts.css">
-  <link rel="stylesheet" href="/assets/styles/components.css">
-  <link rel="stylesheet" href="/assets/styles/icons.css">
-  <link rel="stylesheet" href="/assets/styles/variables.css">
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Uebersicht Page</title>
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+  </head>
 
   <header>
     <h1>
-      <img src="./images/thLogo.png" alt="TH Logo">
+      <img src="./images/thLogo.png" alt="TH Logo" />
     </h1>
     <div class="search-container">
       <div class="search big-vp">
-        <input type="search" placeholder="Suche">
-        <div class="icon">search</div>
+        <input type="search" placeholder="Suche" />
+        <div class="icon icon-l">search</div>
       </div>
-      <span class="icon icon-l">menu</span>
-      <ul class="main-menu">
-        <li><a href="#">News</a></li>
-        <li><a href="./about/about-the-project.html">Barrierefreiheit</a></li>
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="#">DE</a></li>
-      </ul>
     </div>
-
-
+    <span class="icon icon-menu icon-xl" data-js-menu-button>menu</span>
+    <ul class="main-menu" data-js-menu>
+      <li><a href="#">News</a></li>
+      <li><a href="./about/about-the-project.html">Barrierefreiheit</a></li>
+      <li><a href="./login.html">Login</a></li>
+      <li><a href="#">DE</a></li>
+    </ul>
   </header>
-
 
   <main>
     <nav>
-      <ul class="sections">
-        <li><a href="#">Mein Bereich</a></li>
-        <li><a href="#">Suche</a></li>
-        <li><a href="#">Aktuelles</a></li>
+      <ul class="tab-navigation">
+        <li data-js-tab><a href="#">Mein Bereich</a></li>
+        <li data-js-tab><a href="#">Suche</a></li>
+        <li data-js-tab><a href="#">Aktuelles</a></li>
       </ul>
     </nav>
     <div class="search-container">
-      <div class="search small-vp" href="#">
-        <input type="search" placeholder="Suche">
+      <div class="search small-vp">
+        <input type="search" placeholder="Suche" />
         <div class="icon">search</div>
       </div>
     </div>
-
-    <section class="banner">
-      <h2>Willkommen!</h2>
-      <p>In der Bearbeitung von Projekten ist es von entscheidender Bedeutung, nicht nur theoretisches Wissen zu
-        besitzen, sondern auch praxiserprobte Methoden, bewährte Tricks und den souveränen Umgang mit müglichen
-        Stolpersteinen zu beherrschen. Hier setzt ProjectSurvival4All an, eine innovative Plattform in
-        Zusammenarbeit mit der TH Köln, die entwickelt wurde, um dich und dein Team bei Projektarbeiten und im
-        Studium optimal zu unterstützen. Hier erwarten dich erstklassige Inhalte von erfahrenen Dozenten, die
-        dir Best Practices und kuratiertes Wissen auf eine interessante und effiziente Weise vermitteln.
-        Schau einfach mal vorbei und entdecke, wie ProjectSurvival4All deine Projekterfahrung auf das nächste
-        Level heben kann.</p>
-      <a href="./about/about-the-project.html">Ueber das Projekt</a>
-    </section>
-    <section>
-      <h2>Favoriten</h2>
-      <ul class="list is-grid">
-        <li class="list-item"><span class="icon icon-l">description</span>Wie baue ich eine Praesentatione auf?<address>
-            Monika Engelen</address>
-        </li>
-        <li class="list-item"><span class="icon icon-l">description</span>Wie erstelle ich eine Agenda?<address>Raphael
-            Grotten</address>
-        </li>
-        <li class="list-item"><span class="icon icon-l">description</span>Wie priorisiere ich (ein Backlog)?<address>
-            Raphael Grotten</address>
-        </li>
-        <li class="list-item"><span class="icon icon-l">description</span>Wie halte ich einen Pitch?<address>Monika
-            Engelen</address>
-        </li>
-        <li class="list-item"><span class="icon icon-l">description</span>Wie baue ich eine Praesentatione auf?<address>
-            Monika Engelen</address>
-        </li>
-      </ul>
-      <h2>Von deinem ILU Schreibtisch</h2>
-      <ul class="list is-inline">
-        <li class="list-item"><span class="icon icon-l">folder</span><a href="#">Datenbaken</a></li>
-        <li class="list-item"><span class="icon icon-l">folder</span><a href="#">Kommunikationstechnik und Netze</a>
-        </li>
-        <li class="list-item"><span class="icon icon-l">folder</span><a href="#">Paradigmen der Programmierung</a></li>
-        <li class="list-item"><span class="icon icon-l">folder</span><a href="#">Audiovisuelles Medienprojekt</a></li>
-        <li class="list-item"><span class="icon icon-l">folder</span><a href="#">Grundlagen des Webs</a></li>
-        <li class="list-item"><span class="icon icon-l">folder</span><a href="#">Screendesign</a></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Verlauf</h2>
-      <ul>
-        <li class="card">
-          <a href="#">
-            <figure>
-              <img src="./images/rednerin-praesentation.jpg" alt="Pitch">
-              <h3>Wie halte ich einen Pitch?</h3>
-              <address>Monika Engelen</addres>
+    <section class="area"data-js-area>
+      <section class="banner">
+        <h2>Willkommen!</h2>
+        <p>
+          In der Bearbeitung von Projekten ist es von entscheidender Bedeutung, nicht nur
+          theoretisches Wissen zu besitzen, sondern auch praxiserprobte Methoden, bewährte Tricks
+          und den souveränen Umgang mit müglichen Stolpersteinen zu beherrschen. Hier setzt
+          ProjectSurvival4All an, eine innovative Plattform in Zusammenarbeit mit der TH Köln, die
+          entwickelt wurde, um dich und dein Team bei Projektarbeiten und im Studium optimal zu
+          unterstützen. Hier erwarten dich erstklassige Inhalte von erfahrenen Dozenten, die dir
+          Best Practices und kuratiertes Wissen auf eine interessante und effiziente Weise
+          vermitteln. Schau einfach mal vorbei und entdecke, wie ProjectSurvival4All deine
+          Projekterfahrung auf das nächste Level heben kann.
+        </p>
+        <a href="./about/about-the-project.html">Ueber das Projekt</a>
+      </section>
+      <section>
+        <h2>Favoriten</h2>
+        <ul class="list is-grid">
+          <li class="list-item">
+            <span class="icon icon-l">description</span>Wie baue ich eine Praesentatione auf?
+            <address>Monika Engelen</address>
+          </li>
+          <li class="list-item">
+            <span class="icon icon-l">description</span>Wie erstelle ich eine Agenda?
+            <address>Raphael Grotten</address>
+          </li>
+          <li class="list-item">
+            <span class="icon icon-l">description</span>Wie priorisiere ich (ein Backlog)?
+            <address>Raphael Grotten</address>
+          </li>
+          <li class="list-item">
+            <span class="icon icon-l">description</span>Wie halte ich einen Pitch?
+            <address>Monika Engelen</address>
+          </li>
+          <li class="list-item">
+            <span class="icon icon-l">description</span>Wie baue ich eine Praesentatione auf?
+            <address>Monika Engelen</address>
+          </li>
+        </ul>
+        <h2>Von deinem ILU Schreibtisch</h2>
+        <ul class="list is-inline">
+          <li class="list-item">
+            <span class="icon icon-l">folder</span><a href="#">Datenbaken</a>
+          </li>
+          <li class="list-item">
+            <span class="icon icon-l">folder</span><a href="#">Kommunikationstechnik und Netze</a>
+          </li>
+          <li class="list-item">
+            <span class="icon icon-l">folder</span><a href="#">Paradigmen der Programmierung</a>
+          </li>
+          <li class="list-item">
+            <span class="icon icon-l">folder</span><a href="#">Audiovisuelles Medienprojekt</a>
+          </li>
+          <li class="list-item">
+            <span class="icon icon-l">folder</span><a href="#">Grundlagen des Webs</a>
+          </li>
+          <li class="list-item">
+            <span class="icon icon-l">folder</span><a href="#">Screendesign</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Verlauf</h2>
+        <ul>
+          <li class="card">
+            <section>
+              <figure>
+                <img src="./images/rednerin-praesentation.jpg" alt="Pitch" />
+                <h3>Wie halte ich einen Pitch?</h3>
+                <address>Monika Engelen</address>
                 <ul>
                   <li><a href="#">Pitch</a></li>
                   <li><a href="#">Startup</a></li>
@@ -111,15 +119,15 @@
                   <li><a href="#">Vortrag</a></li>
                   <li><a href="#">Projektidee</a></li>
                 </ul>
-            </figure>
-          </a>
-        </li>
-        <li class="card">
-          <a href="#">
-            <figure>
-              <img src="./images/pitch-strukturieren.jpg" alt="Pitch">
-              <h3>Wie halte ich einen Pitch?</h3>
-              <address>Monika Engelen</addres>
+              </figure>
+            </section>
+          </li>
+          <li class="card">
+            <section>
+              <figure>
+                <img src="./images/pitch-strukturieren.jpg" alt="Pitch" />
+                <h3>Wie halte ich einen Pitch?</h3>
+                <address>Monika Engelen</address>
                 <ul>
                   <li><a href="#">Pitch</a></li>
                   <li><a href="#">Startup</a></li>
@@ -128,41 +136,162 @@
                   <li><a href="#">Vortrag</a></li>
                   <li><a href="#">Projektidee</a></li>
                 </ul>
-            </figure>
-          </a>
-        </li>
-      </ul>
-</body>
-</main>
-<footer>
-  <section>
-    <h2>Barriefreiheit</h2>
-    <ul>
-      <li><a href="#">leichte Sprache</a></li>
-    </ul>
-  </section>
-  <section>
-    <h2>Feedback</h2>
-    <ul>
-      <li>
-        <a href="#">Verbesserungsvorschläge</a>
-        <a href="#">Content Vorschläge</a>
-        <a href="#">Feedback Umfrage</a>
-      </li>
-    </ul>
-  </section>
-  <section>
-    <h2>Rechtliche Informationen</h2>
-    <ul>
-      <li>
-        <a href="#">Verantwortliche</a>
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutzhinweise</a>
-      </li>
-    </ul>
-  </section>
-</footer>
+              </figure>
+            </section>
+          </li>
+        </ul>
+      </section>
+    </section>
 
+    <section class="area"data-js-area>
+      <h2>ProjectSurvival4All – 
+    Survival-Tipps für die Projektarbeit
+    </h2>
+    <nav>
+        <ul>
+            <li><a href='#einleitung'>Einleitung</a> </li>
+            <li><a href="#zielsettung">Zielsetzung</a></li>
+            <li><a href="#anwendungderplattform">Anwendung der Plattform</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2> Einleitung</h2>
+In der Arbeitswelt dominieren Projekte den Alltag. Das Hochschulstudium bereitet Studierende gezielt auf diese Anforderungen vor, indem es Projekte konsequent in die Lehre integriert. Dadurch sammeln Studierende bereits während ihres Studiums wertvolle praktische Erfahrungen.
+    </p>
+    </section>
+    <p>
+    
+    <section>
+        <h2>Zielsetzung</h2>
+    <p>Das Ziel von ProjectSurvival4All ist es, eine gemeinsame Wissensplattform zu schaffen, die es ermöglicht, kuratiertes Wissen und Best-Practices rund um Projekte an einem zentralen Ort zugänglich zu machen. Die Vorteile sind vielfältig:
+Qualitätssicherung: Inhalte werden von mindestens einem Dozenten geprüft oder erstellt.
+        <ul>
+
+            <li>Ressourcenschonung:</li><p>Studierende müssen nicht wiederholt nach Lösungen für ähnliche Probleme suchen.</p>
+            <li>Effizienzsteigerung:</li><p>Es werden Verweise auf entsprechende Inhalte bereitgestellt, anstatt umfangreiche Dokumente zu versenden.</p>
+            <li>Transparenz:</li><p>Austausch zwischen Dozenten wird gefördert.</p>
+            <li>Partizipation:</li><p>Neue Bedarfe werden durch die Mitwirkung von Studierenden erfasst.</p>
+            <li>Sichtbarkeit:</li><P>Ein Schaufenster für Studieninteressierte und andere Externe wird geschaffen.</P>
+            <li>Open Educational Resources (OER):</li><p> Materialien werden mit einer offenen Lizenz versehen, um weltweite Verbreitung und Austausch zu ermöglichen.</p>
+        </ul>
+    </p>
+    </section>
+    <section >
+        <h2> Anwendung der Plattform</h2>
+    <p>
+        Die Wissensplattform ProjectSurvival4All bietet umfangreiche Unterstützung für die Bewältigung von Herausforderungen in Projekten. Sie hilft Studierenden, schnell die benötigten Informationen und Ressourcen zu finden, um ihre Projekte erfolgreich zu leiten und zu vollenden. Durch das Angebot modular aufgebauter Inhalte können Studierende gezielt die für sie relevanten Themenbereiche erkunden und vertiefen.
+    </p>
+    <p>
+         Die Plattform integriert verschiedene Medienformate wie Videos, interaktive Tutorials und PDF-Handbücher, um unterschiedliche Lernstile zu unterstützen. Dies macht die Informationen nicht nur zugänglicher, sondern auch ansprechender für eine breite Nutzerbasis. Darüber hinaus wird durch regelmäßige Updates sichergestellt, dass alle Inhalte aktuell bleiben und neue Erkenntnisse schnell integriert werden können.
+    </p>
+    <h2>Wichtige Projekte und Phasen</h2>
+      <p>
+        Die folgende Tabelle bietet einen Überblick über wichtige Projekte, die auf der Wissensplattform behandelt werden, und zeigt, wie diese den verschiedenen Phasen des Projektmanagements zugeordnet sind:
+    </p>
+    </section>
+    
+    <p>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Projekt</th>
+                <th scope="col">Beschreibung</th>
+                <th scope="col">Projektphase</th>
+            </tr>
+            </thead>
+        
+            <tbody>
+            <tr>
+                <th>Welche Finanzierungsoptionen stehen einem Startup zur Verfügung?</th>
+                <td>Eine Übersicht über verschiedene Finanzierungsquellen für Startups, einschließlich Eigenkapital, Fremdkapital, Crowdfunding, Venture Capital und staatliche Förderprogramme.</td>
+                <td>Projektstart</td>
+        </tr>
+            
+            <tr>
+            <th scope="row">Wie validiere ich meine Geschäftsidee, bevor ich ein Startup gründe?</th>
+            <td>Methoden und Ansätze zur Bewertung und Validierung einer Geschäftsidee, um deren Marktchancen, Kundenbedürfnisse und Rentabilität zu prüfen, bevor man ein Startup gründet .</td>
+            <td>Projektstart</td>
+            </tr>
+            <tr>
+            <th scope="row">Wie bewältige ich Stress?</th>
+            <td>Strategien und Techniken zur Bewältigung von Stress, einschließlich Zeitmanagement, Entspannungsübungen, Priorisierung von Aufgaben und Kommunikationstechniken.</td>
+            <td>Projektstart, Projektabschluss, Projektplanung</td>
+            </tr>
+            <tr>
+            <th scope="row">Wie arbeite ich im Team? </th>
+            <td>Tipps und Best Practices für eine effektive Zusammenarbeit in einem Team, einschließlich klarer Rollenverteilung, offener Kommunikation und konstruktivem Feedback.</td>
+            <td> Projektstart, "Projektabschluss" </td>
+            </tr>
+            <tr>
+                <th scope="row">Wie halte ich einen Pitch?</th>
+                <td>Tipps und Best Practices zur Vorbereitung und Durchführung eines überzeugenden Pitches, einschließlich der Strukturierung des Inhalts, Präsentationstechniken und der Beantwortung von Fragen.</td>
+                <td>Projektidee, Projektstart, Projektabschluss</td>
+            </tr>
+            <tr>
+                <th scope="row">Wie erstelle ich eine Agenda?</th>
+                <tr>Schritte und Richtlinien zur Erstellung einer effektiven Agenda für Meetings oder Veranstaltungen, einschließlich der Festlegung von Zielen, Priorisierung von Themen und Zeitplanung.</tr>
+                <tr>immer</tr>
+            </tr>
+       </tbody>
+    </table>
+    </p>
+<figure>
+    <img href="../images/agenda.jpg" alt="Agenda"/>
+</figure>
 </section>
 
+<section class="area" data-js-area>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
+
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.   
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.   
+
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.   
+
+Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.   
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
+
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo</p>
+</section>
+
+    <footer>
+      <section>
+        <h2>Barriefreiheit</h2>
+        <ul>
+          <li><a href="#">leichte Sprache</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Feedback</h2>
+        <ul>
+          <li>
+            <a href="#">Verbesserungsvorschläge</a>
+            <a href="#">Content Vorschläge</a>
+            <a href="#">Feedback Umfrage</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Rechtliche Informationen</h2>
+        <ul>
+          <li>
+            <a href="#">Verantwortliche</a>
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutzhinweise</a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+  </main>
+  <script src="./assets/scripts/main.js" defer></script>
 </html>
