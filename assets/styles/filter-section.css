@@ -1,0 +1,119 @@
+
+/* compositions
+############################################################################ */
+
+.horizontal-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--xs);
+  }
+  
+  /* utlities
+  ############################################################################ */
+  
+  .p-m {
+    padding: var(--m);
+  }
+  
+  /* filter section
+  ############################################################################ */
+  
+  .filter-section {
+    background-color: var(--color-white);
+    margin: var(--m);
+  
+    /* align bottom right */
+    .filter-section-actionbar {
+      display: flex;
+      gap: var(--xs);
+      padding-top: var(--m);
+      justify-content: flex-end; 
+    }
+  
+    h2 {
+      margin-bottom: 0;
+    }
+  
+    h3 {
+      margin-bottom: var(--quarter);
+    }
+  }
+  
+  /* buttons
+  ############################################################################ */
+  
+  .button {
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--tr-normal);
+    padding: var(--half) var(--m);
+  
+    &[data-state="active"] {
+      font-weight: var(--fw-bold);
+    }
+  }
+  
+  .button-primary {
+    background-color: var(--color-grey);
+  
+    &:hover {
+      background-color: var(--color-grey-medium);
+    }
+  }
+  
+  .button-secondary {
+    color: var(--color-white);
+    background-color: var(--color-th-pink);
+  
+    &:hover {
+      background-color: var(--color-th-pink-lighter);
+    }
+  }
+  
+  
+  /* card grid
+  ############################################################################ */
+  
+  .card-grid{
+    display: grid;
+    gap: var(--m);
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(calc(var(--grid-item-size-max) * 1.5), 1fr));
+  
+    li{
+      margin-bottom: var(--quarter);
+      background-color: var(--color-white);
+  
+      img{
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+      }
+  
+      figcaption{
+        padding: var(--s);
+      }
+  
+      h3{
+        padding: 0;
+        margin: 0;
+        font-weight: var(--fw-bold);
+      }
+  
+      address{
+        margin-bottom: var(--s);
+      }
+    }
+  }
+  
+ /* Tag List
+############################################################################ */
+
+.tag-list{
+    li{
+      display: inline-block;
+      padding: var(--eighth) var(--half);
+      background-color: var(--color-grey);
+      font-size: var(--s);
+    }
+  }

@@ -8,8 +8,27 @@ header {
   .icon-menu {
     position: relative;
     top: 18px;
-    margin: var(--m);
-  }
+	margin: var(--m);
+    }
+
+	.menu-bar{
+		display: none;	
+		flex-direction: row;
+		align-self: center;
+		padding-right: var(--m);
+		gap: var(--s);
+	
+	}
+
+	@media screen and (width >= 734px) {
+		.icon-menu{
+			display: none;
+		}
+
+		.menu-bar{
+			display: flex;
+		}
+	}
 }
 
 /* Main Menu
@@ -18,17 +37,17 @@ header {
   position: fixed;
   z-index: 10;
   top: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
   display: flex;
   width: 200px;
   height: 100%;
   flex-direction: column;
   padding: var(--xl);
-  gap: var(--l);
   background-color: var(--color-light);
+  gap: var(--l);
   transform: translateX(-100%);
-  transition: transform var(--tr-normal);
+  transition: transform var(--tr-normal) ease-in-out;
 
   &.is-active {
     transform: translateX(0);
@@ -41,6 +60,7 @@ header {
 .tab-navigation {
   display: flex;
   background-color: var(--color-lightest);
+
   li {
     width: 100%;
     justify-content: space-around;
@@ -49,7 +69,13 @@ header {
     &.is-active {
       background-color: var(--color-light);
     }
+
   }
+
+    :hover{
+      background-color: var(--color-light-hover);
+    }
+
 }
 
 main {
@@ -62,6 +88,7 @@ main {
 ---------------------------------------------------------------------------- */
 .area {
   display: none;
+
   &.is-active {
     display: block;
   }
@@ -72,9 +99,9 @@ main {
 /* stylelint-disable-next-line no-descending-specificity */
 .search-container {
   display: flex;
-  margin-top: var(--xs);
   flex-grow: 1;
-
+  margin-top: var(--xs);
+  
   .search {
     &.big-vp {
       display: flex;
@@ -83,31 +110,33 @@ main {
 
       input {
         flex-grow: 1;
+		border: none;
         background-color: var(--color-light);
-        border: none;
         outline: none;
 
         &::placeholder {
           padding-left: var(--m);
         }
       }
+
       .icon {
         position: relative;
+		padding: var(--m);
         background-color: var(--color-orange);
-        padding: var(--m);
+        
       }
     }
 
     &.small-vp {
       display: flex;
       flex-grow: 1;
+
       input {
         flex-grow: 1;
+		padding: var(--m);
         border: none;
+		margin: var(--m);
         outline: none;
-
-        padding: var(--m);
-        margin: var(--m);
       }
 
       .icon {
@@ -117,6 +146,7 @@ main {
       }
     }
 
+    /* stylelint-disable-next-line no-duplicate-selectors */
     &.big-vp {
       display: none;
     }
@@ -136,14 +166,17 @@ main {
 /* Banner (Willkommen)
 ---------------------------------------------------------------------------- */
 .banner {
+  align-items: center;
   padding: var(--s);
   background-color: var(--color-orange);
   color: var(--color-lightest);
   padding-inline: var(--s);
-  align-items: center;
+  
+  
   p {
+	 max-width: 800px;
     padding: var(--xxs);
-    max-width: 800px;
+   
   }
 
   :any-link {
@@ -183,7 +216,7 @@ main {
     margin-left: var(--xxl);
     font-size: var(--xs);
     font-style: normal;
-    line-height: vr(--lh-tight);
+    line-height: var(--lh-tight);
   }
 }
 
@@ -211,6 +244,7 @@ main {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
+    margin-left: var(--xs);
     gap: var(--xxs);
     overflow-x: scroll;
     scrollbar-color: rgba(0 0 0/ 0%) rgb(0 0 0/ 0%);
@@ -237,7 +271,9 @@ footer {
     flex-grow: 1;
   }
 
+  /* stylelint-disable-next-line no-descending-specificity */
   ul {
+    /* stylelint-disable-next-line no-descending-specificity */
     li {
       display: flex;
       flex-direction: column;
@@ -247,6 +283,7 @@ footer {
       a {
         padding-bottom: var(--xs);
       }
+      /* stylelint-disable-next-line rule-empty-line-before */
       ::before {
         content: '\00BB';
       }

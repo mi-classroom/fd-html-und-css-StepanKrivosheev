@@ -1,0 +1,34 @@
+:root {
+    --color-th-orange: #ea5b0c;
+    --color-grey: #E8E8E8;
+    --color-grey-medium: #D8D8D8;
+    --color-grey-dark: hsl(0deg 0% 40%);
+    --color-white: #fff;
+    --color-darkest: #000;
+    --color-th-pink: #B62584;
+    --color-th-pink-lighter: #dd639a;
+    --ff-primary: source-sans-3, arial, helvetica, sans-serif;
+    --ff-icons: material-icons;
+    --lh-tight: 100%;
+    --lh-normal: 130%;
+    --lh-loose: 150%;
+    --fw-light: 200;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 600;
+    --basefont-size: 1rem;
+    --xs: calc(var(--basefont-size) * 0.65);
+    --s: calc(var(--basefont-size) * 0.8);
+    --m: var(--basefont-size);
+    --l: calc(var(--basefont-size) * 1.2);
+    --xl: calc(var(--basefont-size) * 1.4);
+    --xxl: calc(var(--basefont-size) * 1.6);
+    --xxxl: calc(var(--basefont-size) * 1.9);
+    --eighth: calc(var(--m) / 8);
+    --quarter: calc(var(--m) / 4);
+    --half: calc(var(--m) / 2);
+    --grid-item-size-max: 300px;
+    --tr-fast: 0.3s;
+    --tr-normal: 0.6s;
+    --tr-slow: 1s;
+  }
