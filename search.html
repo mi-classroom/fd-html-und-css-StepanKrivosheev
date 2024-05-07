@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProjectSurvival4All – Survival-Tipps für die Projektarbeit - Suche</title>
+    <link rel="stylesheet" href="./assets/styles/search.css" />
+    <script src="./assets/scripts/search.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ProjectSurvival4All – Survival-Tipps für die Projektarbeit - Suche</title>
-  <link rel="stylesheet" href="./assets/styles/search.css">
-  <script src="/assets/scripts/articlelist.js"></script>
-</head>
-
-<body>
-
-  <main>
-    <section class="filter-section p-m">
-      <h2>Filter</h2>
-      <h3>Projektphasen</h3>
-      <ul class="horizontal-flow" data-js-category="projectphase">
-        <li><button class="button button-primary" data-js-filter>Projektidee</button></li>
+  <body>
+    <main>
+      <section class="filter-section p-m">
+        <h2>Filter</h2>
+        <h3>Projektphasen</h3>
+        <ul class="horizontal-flow" data-js-category="projectphase">
+          <!-- <li><button class="button button-primary" data-js-filter>Projektidee</button></li>
         <li><button class="button button-primary" data-js-filter>Projektstart</button></li>
         <li><button class="button button-primary" data-js-filter>Projektdurchführung</button></li>
-        <li><button class="button button-primary" data-js-filter>Projektabschluss</button></li>
-      </ul>
-      <h3>Schlagwörter</h3>
-        <ul class="horizontal-flow" data-js-category="keywords"> 
-       <!-- <li><button class="button button-primary" data-js-filter>Finanzierung</button></li>
+        <li><button class="button button-primary" data-js-filter>Projektabschluss</button></li> -->
+        </ul>
+        <h3>Schlagwörter</h3>
+        <ul class="horizontal-flow" data-js-category="keywords">
+          <!-- <li><button class="button button-primary" data-js-filter>Finanzierung</button></li>
         <li><button class="button button-primary" data-js-filter>Startup</button></li>
         <li><button class="button button-primary" data-js-filter>Eigenkapital</button></li>
         <li><button class="button button-primary" data-js-filter>Fremdkapital</button></li>
@@ -70,28 +68,28 @@
         <li><button class="button button-primary" data-js-filter>Scrum</button></li>
         <li><button class="button button-primary" data-js-filter>Kanban</button></li>
         <li><button class="button button-primary" data-js-filter>Strukturieren</button></li> -->
-      </ul>
-      <h3>Deine Module</h3>
-      <ul class="horizontal-flow" data-js-category="modules">
-        <li><button class="button button-primary" data-js-filter>Projektmanagement</button></li>
+        </ul>
+        <h3>Deine Module</h3>
+        <ul class="horizontal-flow" data-js-category="modules">
+          <!-- <li><button class="button button-primary" data-js-filter>Projektmanagement</button></li>
         <li><button class="button button-primary" data-js-filter>Sressmanagement</button></li>
         <li><button class="button button-primary" data-js-filter>Betriebswirtschaftslehre</button></li>
         <li><button class="button button-primary" data-js-filter>Screendesign</button></li>
-        <li><button class="button button-primary" data-js-filter>Entwicklungsprojekt</button></li>
-      </ul>
-      <h3>Dateiformat</h3>
-      <ul class="horizontal-flow" data-js-category="fileFormat">
-        <li><button class="button button-primary" data-js-filter>pdf</button></li>
-        <li><button class="button button-primary" data-js-filter>mp4</button></li>
-      </ul>
-      <div class="filter-section-actionbar">
-        <button class="button button-primary">Filter löschen</button>
-        <button class="button button-secondary">Filter Anwenden</button>
-      </div>
-    </section>
-    <section class="p-m">
-      <ul class="card-grid" data-js-generate-articlelist>
-         <!-- <li>
+        <li><button class="button button-primary" data-js-filter>Entwicklungsprojekt</button></li> -->
+        </ul>
+        <h3>Dateiformat</h3>
+        <ul class="horizontal-flow" data-js-category="fileFormat">
+          <!-- <li><button class="button button-primary" data-js-filter>pdf</button></li>
+        <li><button class="button button-primary" data-js-filter>mp4</button></li> -->
+        </ul>
+        <div class="filter-section-actionbar">
+          <button class="button button-primary" data-js-clear-filter>Filter löschen</button>
+          <button class="button button-secondary" data-js-apply-filter>Filter Anwenden</button>
+        </div>
+      </section>
+      <section class="p-m">
+        <ul class="card-grid" data-js-generate-articlelist>
+          <!-- <li>
           <figure>
             <img src="./images/praesentation-aufbau.jpg" alt="Präsentation Aufbau">
             <figcaption>
@@ -231,11 +229,8 @@
             </figcaption>
           </figure>
         </li> -->
-      </ul>
-
-    </section>
-
-  </main>
-</body>
-
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
